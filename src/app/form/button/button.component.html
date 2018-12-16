@@ -1,0 +1,26 @@
+<!-- Save button content -->
+<ng-template #contentTpl><ng-content></ng-content></ng-template>
+
+<!-- Stroked button -->
+<button *ngIf="type === 'stroked'" class="button" mat-stroked-button>
+  <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+</button>
+
+<!-- Flat button -->
+<button *ngIf="type === 'flat'"
+        [disabled]="disabled"
+        [color]="color"
+        class="button" mat-flat-button>
+  <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+</button>
+
+<!-- Icon button -->
+<button *ngIf="type === 'icon'" class="icon-button" mat-stroked-button>
+  <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+</button>
+
+<!-- Square icon -->
+<button *ngIf="type === 'icon-square'" class="icon-button-square" mat-stroked-button>
+  <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+</button>
+

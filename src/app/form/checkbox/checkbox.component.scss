@@ -1,0 +1,26 @@
+.mt-checkbox {
+  .mat-checkbox-frame {
+    border-width: 1px;
+    border-color: var(--border);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  .mat-checkbox-background {
+    border-width: 1px;
+    border-color: var(--border);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+    border-style: solid;
+    background-color: var(--white) !important;
+  }
+
+  .mat-checkbox-checkmark-path {
+    stroke: var(--warm) !important;
+    stroke-width: 3.13333px !important;
+  }
+
+  input {
+    display: none;
+  }
+}

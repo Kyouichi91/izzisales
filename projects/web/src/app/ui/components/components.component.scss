@@ -1,0 +1,17 @@
+.components {
+  margin: 20px;
+
+  .block {
+    margin: 20px;
+
+    .heading {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .cont {
+      display: inline-block;
+      margin-top: 15px;
+    }
+  }
+}

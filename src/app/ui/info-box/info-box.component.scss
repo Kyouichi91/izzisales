@@ -1,0 +1,35 @@
+.info-box {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--border);
+  max-width: 233px;
+
+  i {
+    margin-right: 8px;
+  }
+
+  span {
+    font-size: 13px;
+    line-height: 1.23;
+  }
+}
+
+@mixin color-scheme($background, $color, $border-color) {
+  background-color: $background;
+  border-color: $border-color;
+  span {
+    color: $color;
+  }
+  i {
+    color: $color;
+  }
+}
+
+.error { @include color-scheme(rgba(255, 0, 0, 0.16), #f00, rgba(255, 0, 0, 0.19)); }
+.blue { @include color-scheme(rgba(0, 162, 255, 0.16), rgba(17, 90, 131, 0.76), rgba(0, 162, 255, 0.19)); }
+.green { @include color-scheme(rgba(14, 159, 76, 0.16), rgba(5, 100, 46, 0.76), rgba(14, 159, 76, 0.19)); }
+.skin { @include color-scheme(rgba(223, 204, 28, 0.28), rgba(74, 83, 8, 0.76), rgba(223, 204, 28, 0.19)); }
+.default { @include color-scheme(rgba(204, 204, 204, 0.16), rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.12)); }

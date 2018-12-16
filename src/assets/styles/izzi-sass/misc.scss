@@ -1,0 +1,75 @@
+@import "breakpoints-mixin";
+
+$misc_classes: (
+
+        'flex-wrap':(
+                'flex-wrap': 'wrap'
+        ),
+        'flex-none':(
+                'flex': 'none'
+        ),
+        'hidden':(
+                'display': 'none'
+        ),
+
+);
+
+.mobile {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: inline-block;
+  }
+}
+
+@each $class_name, $class_params in $misc_classes {
+  .#{$class_name} {
+    @each $name, $param in $class_params {
+      #{$name}: #{$param} !important;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    .mobile-#{$class_name} {
+      @each $name, $param in $class_params {
+        #{$name}: #{$param} !important;
+      }
+    }
+  }
+}
+
+
+.breadcrumbs {
+  margin: 33px 0 42px 0;
+}
+
+.f-left {
+  float: left;
+}
+
+.flex-table {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text);
+  text-align: left;
+
+  .cell, .radio-block {
+    width: 100%;
+    margin-bottom: 0;
+    padding: 16px 17px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cell {
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  app-form-radio-group {
+    width: 100%;
+  }
+}

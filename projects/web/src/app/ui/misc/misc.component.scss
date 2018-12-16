@@ -1,0 +1,21 @@
+.misc {
+  width: 100%;
+
+  .block {
+    margin: 20px;
+
+    .heading {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .cont {
+      display: inline-block;
+      margin-top: 15px;
+
+      button {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

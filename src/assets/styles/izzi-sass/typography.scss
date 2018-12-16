@@ -1,0 +1,97 @@
+//MAIN
+a {
+  font-size: 14px;
+  color: var(--link);
+  line-height: 1.43;
+}
+
+.span {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.46;
+}
+
+b {
+  @extend span;
+  font-weight: bold;
+}
+
+p {
+  font-size: 13px;
+  line-height: 1.46;
+  color: var(--text);
+}
+
+.p2 {
+  font-size: 13px;
+  line-height: 1.46;
+  color: var(--text);
+}
+
+h1 {
+  @include textStyle(24px, 600, text);
+  line-height: 1.17;
+  letter-spacing: -0.1px;
+}
+
+h2 {
+  @include textStyle(20px, 600, text);
+  line-height: 1.2;
+}
+
+h3 {
+  @include textStyle(16px, 600, text);
+  line-height: 1.25;
+}
+
+
+h4 {
+  @include textStyle(14px, 600, text);
+  line-height: 1.29;
+}
+
+// HEADER
+.control {
+  @include textStyle(13px, normal, white-text);
+}
+
+// MAIN
+.placeholder {
+  @include textStyle(14px, normal, placeholder);
+}
+
+.title {
+  @include textStyle(24px, 600, text);
+  line-height: 1.17;
+  letter-spacing: -0.2px;
+}
+
+.text {
+  @include textStyle(14px, normal, text);
+}
+
+.b-600 {
+  font-weight: 600;
+}
+
+.link {
+  @include textStyle(14px, normal, link);
+}
+
+
+// FOOTER
+.footer-title {
+  @include textStyle(14px, 600, text);
+}
+
+.footer-text {
+  @include textStyle(13px, normal, text);
+}
+
+.footer-small-text {
+  @include textStyle(10px, 600, text);
+}
+
+.color-red {
+  color: var(--red);
+}

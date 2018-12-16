@@ -1,0 +1,114 @@
+<div class="misc">
+  <div class="block">
+    <div class="header">1. Buttons</div>
+    <div class="cont">
+      <app-form-button class="mr-3" type="stroked">Place Order</app-form-button>
+      <app-form-button class="mr-3" type="flat" color="primary">Place Order</app-form-button>
+      <app-form-button class="mr-3" type="flat" color="warn">Place Order</app-form-button>
+      <app-form-button class="mr-3" type="flat" [disabled]="true">Place Order</app-form-button>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="header">2. Fab</div>
+    <div class="cont">
+      <app-form-button class="mr-3" type="icon"><i class="far fa-heart"></i></app-form-button>
+      <app-form-button class="mr-3" type="icon"><i class="fas fa-money-bill"></i></app-form-button>
+      <app-form-button class="mr-3" type="icon"><i class="fas fa-piggy-bank"></i></app-form-button>
+
+      <br/>
+      <br/>
+
+      <app-form-button class="mr-3" type="icon-square"><i class="far fa-heart"></i>
+      </app-form-button>
+      <app-form-button class="mr-3" type="icon-square"><i class="fas fa-money-bill"></i>
+      </app-form-button>
+      <app-form-button class="mr-3" type="icon-square"><i class="fas fa-piggy-bank"></i>
+      </app-form-button>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="header">3. Form Controls</div>
+    <div class="cont">
+      <app-form-checkbox class="mr-3" [(ngModel)]="unchecked"></app-form-checkbox>
+      <app-form-checkbox [(ngModel)]="checked"></app-form-checkbox>
+
+      <br/>
+      <br/>
+
+      <app-form-round-checkbox class="mr-3" [(ngModel)]="unchecked"></app-form-round-checkbox>
+      <app-form-round-checkbox [(ngModel)]="checked"></app-form-round-checkbox>
+
+      <br/>
+      <br/>
+
+      <div class="flex-table">
+        <app-form-radio-group [(ngModel)]="radioValue"
+                              [radioGroup]="testRadioGroup"></app-form-radio-group>
+        <div class="cell">Some random html</div>
+        <div class="cell">{{radioValue}}</div>
+      </div>
+
+      <br/>
+      <br/>
+
+      <app-form-radio-group [(ngModel)]="radioValue"
+                            [type]="'inline'"
+                            [radioGroup]="testRadioGroup"></app-form-radio-group>
+
+      <br/>
+      <br/>
+
+      <app-form-radio-group [(ngModel)]="radioValue"
+                            [radioGroup]="testRadioGroup"></app-form-radio-group>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="header">4. Forms</div>
+    <div class="cont">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <app-form-input formControlName="firstName"
+                        [submitted]="submitted"
+                        [formControl]="registerForm.controls.firstName"
+                        [placeholder]="'First name'"></app-form-input>
+        <br/>
+        <app-form-input formControlName="email"
+                        [submitted]="submitted"
+                        [formControl]="registerForm.controls.email"
+                        [placeholder]="'Email'"></app-form-input>
+        <br/>
+        <app-form-input formControlName="password"
+                        [submitted]="submitted"
+                        type="password"
+                        [formControl]="registerForm.controls.password"
+                        [placeholder]="'Password'"></app-form-input>
+        <br/>
+        <app-form-input formControlName="confirmPassword"
+                        [submitted]="submitted"
+                        type="password"
+                        [formControl]="registerForm.controls.confirmPassword"
+                        [placeholder]="'Repeat password'"></app-form-input>
+        <br/>
+        <app-form-button type="flat" color="warn">Submit</app-form-button>
+      </form>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="header">5. Notification boxes</div>
+    <div class="cont">
+      <app-ui-info-box class="f-left mr-3 mb-3" type="error" icon="fas fa-exclamation-circle"
+                       [text]="boxText"></app-ui-info-box>
+      <app-ui-info-box class="f-left mr-3 mb-3" type="blue" icon="far fa-clock"
+                       [text]="boxText"></app-ui-info-box>
+      <app-ui-info-box class="f-left mr-3 mb-3" type="green" icon="far fa-clock"
+                       [text]="boxText"></app-ui-info-box>
+      <app-ui-info-box class="f-left mr-3 mb-3" type="skin" icon="far fa-clock"
+                       [text]="boxText"></app-ui-info-box>
+      <app-ui-info-box class="f-left mr-3 mb-3  " icon="far fa-clock"
+                       [text]="boxText"></app-ui-info-box>
+    </div>
+  </div>
+</div>

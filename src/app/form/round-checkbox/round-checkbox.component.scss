@@ -1,0 +1,40 @@
+.mt-checkbox-round {
+
+  .mat-checkbox-inner-container {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mat-checkbox-frame {
+    border: 1px solid var(--border);
+    border-radius: 50%;
+  }
+
+  .mat-checkbox-background {
+    border: 1px solid var(--border);
+    border-radius: 50%;
+  }
+
+  .mat-checkbox-checkmark-path {
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.mat-checkbox-checked {
+  .mat-checkbox-inner-container {
+    border-radius: 50%;
+  }
+
+  .mat-checkbox-frame {
+    border-radius: 50%;
+    background-color: var(--warm);
+  }
+
+  .mat-checkbox-background {
+    border: 1px solid var(--warm);
+    border-radius: 50%;
+  }
+}

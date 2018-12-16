@@ -1,0 +1,93 @@
+$spacingmap: (
+        0: 0,
+        1: 0.25,
+        2: 0.5,
+        3: 0.75,
+        4: 1,
+        5: 1.5,
+        6: 2,
+);
+$spaceamounts: (0, 1, 2, 3, 4, 5, 6);
+$sides: (top, bottom, left, right);
+
+@each $index, $value in $spacingmap {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$index} {
+      margin-#{$side}: #{$value}rem !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$index} {
+      padding-#{$side}: #{$value}rem !important;
+    }
+
+    @include breakpoint(mobile) {
+      .mobile-m#{str-slice($side, 0, 1)}-#{$index} {
+        margin-#{$side}: #{$value}rem !important;
+      }
+
+      .mobile-p#{str-slice($side, 0, 1)}-#{$index} {
+        padding-#{$side}: #{$value}rem !important;
+      }
+    }
+  }
+}
+
+@each $index, $value in $spacingmap {
+  .m-#{$index} {
+    margin: #{$value}rem !important;
+  }
+
+  .mx-#{$index} {
+    margin-left: #{$value}rem !important;
+    margin-right: #{$value}rem !important;
+  }
+
+  .my-#{$index} {
+    margin-top: #{$value}rem !important;
+    margin-bottom: #{$value}rem !important;
+  }
+
+  .p-#{$index} {
+    padding: #{$value}rem !important;
+  }
+
+  .px-#{$index} {
+    padding-left: #{$value}rem !important;
+    padding-right: #{$value}rem !important;
+  }
+
+  .py-#{$index} {
+    padding-top: #{$value}rem !important;;
+    padding-bottom: #{$value}rem !important;;
+  }
+
+  @include breakpoint(mobile) {
+    .mobile-m-#{$index} {
+      margin: #{$value}rem !important;
+    }
+
+    .mobile-mx-#{$index} {
+      margin-left: #{$value}rem !important;
+      margin-right: #{$value}rem !important;
+    }
+
+    .mobile-my-#{$index} {
+      margin-top: #{$value}rem !important;
+      margin-bottom: #{$value}rem !important;
+    }
+
+    .mobile-p-#{$index} {
+      padding: #{$value}rem !important;
+    }
+
+    .mobile-px-#{$index} {
+      padding-left: #{$value}rem !important;
+      padding-right: #{$value}rem !important;
+    }
+
+    .mobile-py-#{$index} {
+      padding-top: #{$value}rem !important;;
+      padding-bottom: #{$value}rem !important;;
+    }
+  }
+}

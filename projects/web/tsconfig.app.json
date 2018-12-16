@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../out-tsc/app",
+    "types": []
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ],
+  "baseUrl": "../../src",
+  "paths": {
+    "@shared-app/*": ["app/*"],
+    "@shared-pipes/*": ["pipes/*"],
+    "@shared-services/*": ["services/*"]
+  }
+}

@@ -1,0 +1,11 @@
+<mat-radio-group [(ngModel)]="value"
+                 [ngClass]="type"
+                 (change)="propagateChange(value)">
+  <div class="radio-block" *ngFor="let radio of radioGroup">
+    <mat-radio-button
+      class="radio-button"
+      [value]="radio.value"
+      [color]="radio.color ? radio.color : 'warn'"></mat-radio-button>
+    <span class="radio-button-text" [innerHTML]="radio.text"></span>
+  </div>
+</mat-radio-group>

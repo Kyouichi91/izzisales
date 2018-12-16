@@ -1,0 +1,72 @@
+@import "../../assets/styles/izzi-sass/mixins";
+
+.header {
+  background: var(--header);
+  min-height: 76px;
+  padding: 0 16px;
+  width: 100%;
+  color: var(--white-text);
+  display: flex;
+  align-items: center;
+
+  .logo {
+    margin: 0 40px 0 24px;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 28px;
+      font-weight: bold;
+      color: var(--white);
+    }
+
+    .mobile-menu {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .izzi {
+      color: var(--orange);
+    }
+  }
+
+  .search-bar {
+    position: relative;
+    flex: 1;
+    color: var(--text);
+
+    i {
+      @include vertical-align-center();
+      left: 15px;
+    }
+
+    input {
+      width: 100%;
+      height: 44px;
+      color: var(--placeholder);
+      border-radius: 4px;
+      border: 0;
+      padding: 0 48px;
+      max-width: 650px;
+    }
+  }
+
+  .controls {
+    display: flex;
+    margin: 0 34px 0 48px;
+
+    .language-selector {
+      span{
+        color: var(--white);
+      }
+    }
+
+    .login {
+      margin-left: 50px;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}

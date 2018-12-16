@@ -1,0 +1,73 @@
+@import "reset";
+@import "fonts";
+@import "vars";
+@import "colors-default";
+
+//PAGES
+@import "pages/stuff";
+@import "pages/reviews";
+@import "pages/privacy-notice";
+@import "pages/buyer";
+@import "pages/contact";
+
+//OUR LITTLE BOOTSTRAP//
+@import "izzi-sass/mixins";
+@import "izzi-sass/breakpoints-mixin";
+@import "izzi-sass/typography";
+@import "izzi-sass/components";
+@import "izzi-sass/misc";
+@import "izzi-sass/spacings";
+@import "izzi-sass/forms";
+@import "izzi-sass/buttons";
+@import "izzi-sass/ui";
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+app-root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: $default-font;
+  min-height: 100vh;
+
+
+  .header {
+    width: 100%;
+  }
+
+  .content {
+    display: inline-block;
+    width: 100%;
+    flex: 1;
+  }
+
+  .main-menu {
+  }
+
+  .footer {
+    width: 100%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    .izzi {
+      color: var(--orange);
+    }
+
+    span {
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+}

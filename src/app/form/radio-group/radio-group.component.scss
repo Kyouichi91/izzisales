@@ -1,0 +1,37 @@
+.inline {
+  display: flex;
+
+  .radio-block {
+    margin-right: 32px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .radio-button-text {
+      white-space: nowrap;
+    }
+  }
+}
+
+.radio-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .radio-button {
+    input {
+      display : none;
+    }
+
+    .mat-radio-outer-circle {
+      border-color: var(--border) !important;
+      border-width: 1px;
+    }
+  }
+
+  .radio-button-text {
+    font-size: 14px;
+    color: var(--text);
+    margin-left: 16px;
+  }
+}

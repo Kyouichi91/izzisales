@@ -1,0 +1,35 @@
+@mixin textStyle($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: var(--#{$color});
+}
+
+@mixin flex-middle() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin padding-v($v) {
+  padding-top: $v;
+  padding-bottom: $v;
+}
+
+@mixin padding-h($h) {
+  padding-right: $h;
+  padding-left: $h;
+}
+
+@mixin flex-middle() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin vertical-align-center() {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
